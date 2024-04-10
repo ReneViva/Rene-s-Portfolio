@@ -1,0 +1,35 @@
+img{
+    width: 10%;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    pointer-events: none; /* Disable pointer events */
+    -webkit-touch-callout: none; /* Disable touch callout on iOS */
+    user-select: none; /* Disable user selection */
+    -moz-user-select: none; /* Disable user selection for Firefox */
+    -ms-user-select: none; /* Disable user selection for Internet Explorer/Edge */
+    -webkit-user-select: none; /* Disable user selection for Chrome/Safari */
+}
+a>div{
+    margin-left: 0.5vw;
+    margin-right: 0.5vw; 
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+.lis-hover :hover{
+color: rgb(0, 204, 255);
+}
+
+a{
+    display: flex;
+margin: 1vw;
+
+    width: max-content;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}

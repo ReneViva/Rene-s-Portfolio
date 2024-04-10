@@ -1,0 +1,147 @@
+
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --back2 :#515551;
+  --background-color:#191a19;
+  --text:#f2f2f2 ;
+  --text-hover:#858685 ;
+}
+body {
+  margin: 0px;
+  font-family: "segoe ui";
+  background-color: #03131a;
+  background-repeat: no-repeat;
+  height: 50vw;
+
+  background-image: -webkit-linear-gradient( to #2c323d, #03131a );
+  background-image: -moz-linear-gradient( top, #2c323d, #03131a );
+  background-image: -o-linear-gradient( top, #2c323d, #03131a );
+  background-image: linear-gradient( to bottom, #2c323d, #03131a );
+
+
+}
+
+.nav {
+  height: 5rem;
+  width: 100%;
+  background-color: #09232e;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 5px 1000px #34efdf;
+}
+.active-nav-link{
+  border-bottom: 1px solid #34efdf;
+
+}
+
+.nav > .nav-header {
+  display: inline;
+  margin-left: 2rem;
+}
+
+.nav > .nav-header > .nav-title {
+  font-family: play;
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  font-size: 200%;
+  font-weight: bolder;
+
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  margin-right: 2rem;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 1px 10px 1px 10px;
+  text-decoration: none;
+  color: #efefef;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-top: 1px solid transparent  ;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid #34efdf  ;
+  border-radius: 10px ;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: relative;
+    right: 0px;
+    top: 0%;
+ 
+
+
+  }
+  
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: fit-content;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    
+    z-index: 999;
+    position: absolute;
+    display: block;
+    width: 40%;
+    background-color:#0e3647e1 ;
+    height: fit-content;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 5rem;
+    right: 0px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    text-align: left
+    
+  }
+  .nav > .nav-links > a {
+    display: block;
+    
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(40vh - 50px);
+    border-radius: 0 0 0 50px ;
+    overflow-y: auto;
+  }
+
+}

@@ -1,0 +1,106 @@
+
+
+
+
+.gif {
+  margin-top: 0;
+  position: relative;
+  width: 99vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  pointer-events: none; /* Disable pointer events */
+  -webkit-touch-callout: none; /* Disable touch callout on iOS */
+  user-select: none; /* Disable user selection */
+  -moz-user-select: none; /* Disable user selection for Firefox */
+  -ms-user-select: none; /* Disable user selection for Internet Explorer/Edge */
+  -webkit-user-select: none; /* Disable user selection for Chrome/Safari */
+}
+
+.gif img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  margin: 0 0 0 0;
+  object-fit: cover; /* Ensure the image covers the entire space without stretching */
+}
+
+.displayMajor {
+    font-family: playfair;
+    opacity: 0; /* Start with opacity 0 */
+    animation: MajorfadeIn 6s ease-in infinite;
+    position: absolute;
+    font-size: 5vw; /* Responsive font size */
+    top: 15%; /* Position text in the middle vertically */
+    left: 50%; /* Position text in the middle horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */
+    color: azure;
+    width: 80%; /* Responsive width */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+
+  
+  .download-cv {
+    position: absolute;
+    top: 60%; /* Position text below brief-explanation */
+    left: 50%; /* Position text in the middle horizontally */
+    transform: translate(-50%, -50%);
+    border-radius: 100px;
+    width: 40%; /* Responsive width */
+    max-width: 200px; /* Limit maximum width */
+    height: 4rem;
+    background-color: transparent;
+    border-color: #34efdf;
+    border-width: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 9999;
+    pointer-events: auto;
+  }
+  .download-cv>a {
+    text-decoration: none;
+    color: azure;
+    font-size: 140%;
+    text-align: center;
+    z-index: 9999;
+    pointer-events: auto;
+
+    }
+  @media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .displayMajor {
+      font-size: 7vw;
+      top: 10%; 
+      margin: 0;
+
+    }
+    
+
+    .download-cv {
+      width: 60%;
+      z-index: 9999;
+      pointer-events: auto;
+    }
+  }
+  
+.download-cv:hover {
+    border-color: #03131a;
+    border-width: 4px;
+    background-color: #34efdf46;
+
+    
+    }
+
+@keyframes MajorfadeIn {
+  0% {
+    opacity: 0; /* Start opacity */
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0; /* End opacity */
+  }
+}
